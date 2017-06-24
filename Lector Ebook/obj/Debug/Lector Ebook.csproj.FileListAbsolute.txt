@@ -1,0 +1,20 @@
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\bin\Debug\Lector Ebook.exe.config
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\bin\Debug\Lector Ebook.exe
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\bin\Debug\Lector Ebook.pdb
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\obj\Debug\Lector Ebook.csprojResolveAssemblyReference.cache
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\obj\Debug\Lector_Ebook.Properties.Resources.resources
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\obj\Debug\Lector Ebook.csproj.GenerateResource.Cache
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\obj\Debug\Lector Ebook.exe
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\obj\Debug\Lector Ebook.pdb
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\obj\Debug\Lector_Ebook.Inicio.resources
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\obj\Debug\Lector_Ebook.Lector.resources
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\bin\Debug\VersFx.Formats.Text.Epub.dll
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\bin\Debug\HtmlAgilityPack.dll
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\bin\Debug\HtmlAgilityPack.xml
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\bin\Debug\HtmlRenderer.dll
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\bin\Debug\HtmlRenderer.WPF.dll
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\bin\Debug\HtmlRenderer.pdb
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\bin\Debug\HtmlRenderer.WPF.pdb
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\bin\Debug\HtmlRenderer.WinForms.dll
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\bin\Debug\HtmlRenderer.WinForms.pdb
