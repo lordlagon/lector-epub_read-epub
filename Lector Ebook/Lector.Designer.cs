@@ -31,12 +31,12 @@ namespace Lector_Ebook
         private void InitializeComponent()
         {
             this.pn_controles = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbo_pagina = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pn_lector = new System.Windows.Forms.Panel();
             this.htmlPanel = new TheArtOfDev.HtmlRenderer.WinForms.HtmlPanel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.pn_controles.SuspendLayout();
             this.pn_lector.SuspendLayout();
             this.SuspendLayout();
@@ -45,7 +45,7 @@ namespace Lector_Ebook
             // 
             this.pn_controles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.pn_controles.Controls.Add(this.label3);
-            this.pn_controles.Controls.Add(this.comboBox1);
+            this.pn_controles.Controls.Add(this.cbo_pagina);
             this.pn_controles.Controls.Add(this.label2);
             this.pn_controles.Controls.Add(this.label1);
             this.pn_controles.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -54,8 +54,32 @@ namespace Lector_Ebook
             this.pn_controles.Size = new System.Drawing.Size(1034, 61);
             this.pn_controles.TabIndex = 1;
             // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.label3.Location = new System.Drawing.Point(12, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 17);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Capitulos:";
+            // 
+            // cbo_pagina
+            // 
+            this.cbo_pagina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_pagina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbo_pagina.FormattingEnabled = true;
+            this.cbo_pagina.Location = new System.Drawing.Point(99, 17);
+            this.cbo_pagina.Name = "cbo_pagina";
+            this.cbo_pagina.Size = new System.Drawing.Size(224, 21);
+            this.cbo_pagina.TabIndex = 2;
+            // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
             this.label2.Image = global::Lector_Ebook.Properties.Resources.previous;
@@ -69,7 +93,7 @@ namespace Lector_Ebook
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
             this.label1.Image = global::Lector_Ebook.Properties.Resources.skip;
@@ -110,29 +134,6 @@ namespace Lector_Ebook
             this.htmlPanel.StylesheetLoad += new System.EventHandler<TheArtOfDev.HtmlRenderer.Core.Entities.HtmlStylesheetLoadEventArgs>(this.htmlPanel_StylesheetLoad);
             this.htmlPanel.ImageLoad += new System.EventHandler<TheArtOfDev.HtmlRenderer.Core.Entities.HtmlImageLoadEventArgs>(this.htmlPanel_ImageLoad);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(99, 17);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(149, 21);
-            this.comboBox1.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.label3.Location = new System.Drawing.Point(12, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 17);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Capitulos:";
-            // 
             // Lector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,7 +160,7 @@ namespace Lector_Ebook
         private HtmlPanel htmlPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbo_pagina;
         private System.Windows.Forms.Label label3;
     }
 }

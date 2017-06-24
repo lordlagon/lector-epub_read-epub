@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Drawing.Text;
 using System.IO;
-using System.IO.Packaging;
 using System.Windows.Forms;
 using System.Windows.Media.Imaging;
 using TheArtOfDev.HtmlRenderer.Core.Entities;
-using TheArtOfDev.HtmlRenderer.WinForms;
 using VersFx.Formats.Text.Epub;
 
 namespace Lector_Ebook
@@ -25,21 +21,48 @@ namespace Lector_Ebook
 
         EpubBook epub;
         EpubChapter capitulo_actual;
+        int[] paginacion = new int[2];
 
         void mostrar()
         {
-            String pagina;
-            pagina = obtenerContenidoCap(epub.Chapters[2]);
-            
+            paginacion[0] = 0;
+            paginacion[1] = 0;
 
+            String pagina;
+            pagina = obtenerContenidoCap(epub.Chapters[paginacion[0]],paginacion[1]);
+            
             htmlPanel.Text = pagina;
+
+            //Configurar comboBox con capitulos
+            for(int i=0; i< epub.Chapters.Count; i++)
+            {
+                cbo_pagina.Items.Add(epub.Chapters[i].Title);
+
+                if (epub.Chapters[i].SubChapters.Count != 0)
+                {
+                    foreach(EpubChapter sub_cap in epub.Chapters[i].SubChapters )
+                    {
+                        cbo_pagina.Items.Add("  "+sub_cap.Title);
+                    }
+                }
+            }
+            
         }
         
-        String obtenerContenidoCap(EpubChapter chapter)
+        String obtenerContenidoCap(EpubChapter chapter,int sub_pagina)
         {
 
-            capitulo_actual = chapter;
-            return chapter.HtmlContent;
+            if (paginacion[1] == 0)
+            {
+                capitulo_actual = chapter;
+                return chapter.HtmlContent;
+            }
+            else
+            {
+                capitulo_actual = chapter.SubChapters[sub_pagina-1];
+                return chapter.HtmlContent;
+            }
+            
 
         }
 
