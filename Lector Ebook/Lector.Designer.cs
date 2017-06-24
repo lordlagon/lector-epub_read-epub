@@ -31,20 +31,56 @@ namespace Lector_Ebook
         private void InitializeComponent()
         {
             this.pn_controles = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pn_lector = new System.Windows.Forms.Panel();
             this.htmlPanel = new TheArtOfDev.HtmlRenderer.WinForms.HtmlPanel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pn_controles.SuspendLayout();
             this.pn_lector.SuspendLayout();
             this.SuspendLayout();
             // 
             // pn_controles
             // 
-            this.pn_controles.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pn_controles.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pn_controles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.pn_controles.Controls.Add(this.label3);
+            this.pn_controles.Controls.Add(this.comboBox1);
+            this.pn_controles.Controls.Add(this.label2);
+            this.pn_controles.Controls.Add(this.label1);
             this.pn_controles.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pn_controles.Location = new System.Drawing.Point(0, 535);
+            this.pn_controles.Location = new System.Drawing.Point(0, 530);
             this.pn_controles.Name = "pn_controles";
-            this.pn_controles.Size = new System.Drawing.Size(1034, 56);
+            this.pn_controles.Size = new System.Drawing.Size(1034, 61);
             this.pn_controles.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.label2.Image = global::Lector_Ebook.Properties.Resources.previous;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label2.Location = new System.Drawing.Point(348, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(127, 50);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Capitulo Anterior";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.label1.Image = global::Lector_Ebook.Properties.Resources.skip;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Location = new System.Drawing.Point(545, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 50);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Capitulos Siguiente";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pn_lector
             // 
@@ -59,18 +95,43 @@ namespace Lector_Ebook
             // 
             // htmlPanel
             // 
+            this.htmlPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.htmlPanel.AutoScroll = true;
             this.htmlPanel.BackColor = System.Drawing.SystemColors.Window;
             this.htmlPanel.BaseStylesheet = "h1{\r\nfont-family:  Sansation,Arial, Calibri;\r\nfont-size:30px;\r\n}\r\nbody{\r\nfont-fam" +
     "ily:  Sansation,Arial, Calibri;\r\nfont-size:30px;\r\n}";
-            this.htmlPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlPanel.Location = new System.Drawing.Point(0, 0);
             this.htmlPanel.Name = "htmlPanel";
-            this.htmlPanel.Size = new System.Drawing.Size(1034, 533);
+            this.htmlPanel.Size = new System.Drawing.Size(1034, 530);
             this.htmlPanel.TabIndex = 0;
             this.htmlPanel.Text = null;
             this.htmlPanel.StylesheetLoad += new System.EventHandler<TheArtOfDev.HtmlRenderer.Core.Entities.HtmlStylesheetLoadEventArgs>(this.htmlPanel_StylesheetLoad);
             this.htmlPanel.ImageLoad += new System.EventHandler<TheArtOfDev.HtmlRenderer.Core.Entities.HtmlImageLoadEventArgs>(this.htmlPanel_ImageLoad);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(99, 17);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(149, 21);
+            this.comboBox1.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.label3.Location = new System.Drawing.Point(12, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 17);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Capitulos:";
             // 
             // Lector
             // 
@@ -85,6 +146,8 @@ namespace Lector_Ebook
             this.Name = "Lector";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lector";
+            this.pn_controles.ResumeLayout(false);
+            this.pn_controles.PerformLayout();
             this.pn_lector.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -94,5 +157,9 @@ namespace Lector_Ebook
         private System.Windows.Forms.Panel pn_controles;
         private System.Windows.Forms.Panel pn_lector;
         private HtmlPanel htmlPanel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -14,15 +14,11 @@ namespace Lector_Ebook
 {
     public partial class Lector : Form
     {
-
-        private bool areFontsRegistered;
-
         public Lector(EpubBook epub)
         {
             InitializeComponent();
 
             this.epub = epub;
-            areFontsRegistered = false;
 
             mostrar();
         }
@@ -34,9 +30,7 @@ namespace Lector_Ebook
         {
             String pagina;
             pagina = obtenerContenidoCap(epub.Chapters[2]);
-
-            if (!areFontsRegistered)
-           //     RegisterFonts();
+            
 
             htmlPanel.Text = pagina;
         }
@@ -119,38 +113,10 @@ namespace Lector_Ebook
                 e.SetStyleSheet = styleSheetContent.Content;
         }
 
-        private void RegisterFonts()
+      
+        private void label1_Click(object sender, EventArgs e)
         {
-            foreach (KeyValuePair<string, EpubByteContentFile> fontFile in epub.Content.Fonts)
-            {
 
-                PrivateFontCollection fonts = new PrivateFontCollection();
-                byte[] fontData = fontFile.Value.Content;
-                IntPtr fontPtr = System.Runtime.InteropServices.Marshal.AllocCoTaskMem(fontData.Length);
-                System.Runtime.InteropServices.Marshal.Copy(fontData, 0, fontPtr, fontData.Length);
-                uint dummy = 0;
-                fonts.AddMemoryFont(fontPtr, fontData.Length);
-                //AddFontMemResourceEx(fontPtr, (uint)fontData.Length, IntPtr.Zero, ref dummy);
-                System.Runtime.InteropServices.Marshal.FreeCoTaskMem(fontPtr);
-
-                Font myFont = new Font(fonts.Families[0], 16.0F);
-
-                HtmlRender.AddFontFamily(myFont.FontFamily);
-
-                /**
-                MemoryStream packageStream = new MemoryStream();
-                Package package = Package.Open(packageStream, FileMode.Create, FileAccess.ReadWrite);
-                Uri packageUri = new Uri(fontFile.Key + ":");
-                PackageStore.AddPackage(packageUri, package);
-                Uri packPartUri = new Uri("/content", UriKind.Relative);
-                PackagePart packPart = package.CreatePart(packPartUri, "font/content");
-                packPart.GetStream().Write(fontFile.Value.Content, 0, fontFile.Value.Content.Length);
-                Uri fontUri = PackUriHelper.Create(packageUri, packPart.Uri);
-                Fon**/
-
-
-            }
-            areFontsRegistered = true;
         }
     }
 }
