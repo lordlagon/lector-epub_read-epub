@@ -31,12 +31,12 @@ namespace Lector_Ebook
         private void InitializeComponent()
         {
             this.pn_controles = new System.Windows.Forms.Panel();
-            this.cbo_pagina = new System.Windows.Forms.ComboBox();
-            this.pn_lector = new System.Windows.Forms.Panel();
-            this.htmlPanel = new TheArtOfDev.HtmlRenderer.WinForms.HtmlPanel();
             this.label3 = new System.Windows.Forms.Label();
+            this.cbo_pagina = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pn_lector = new System.Windows.Forms.Panel();
+            this.htmlPanel = new TheArtOfDev.HtmlRenderer.WinForms.HtmlPanel();
             this.pn_controles.SuspendLayout();
             this.pn_lector.SuspendLayout();
             this.SuspendLayout();
@@ -54,46 +54,6 @@ namespace Lector_Ebook
             this.pn_controles.Size = new System.Drawing.Size(1034, 61);
             this.pn_controles.TabIndex = 1;
             // 
-            // cbo_pagina
-            // 
-            this.cbo_pagina.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbo_pagina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_pagina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbo_pagina.FormattingEnabled = true;
-            this.cbo_pagina.Location = new System.Drawing.Point(132, 17);
-            this.cbo_pagina.Name = "cbo_pagina";
-            this.cbo_pagina.Size = new System.Drawing.Size(224, 21);
-            this.cbo_pagina.TabIndex = 2;
-            // 
-            // pn_lector
-            // 
-            this.pn_lector.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pn_lector.Controls.Add(this.htmlPanel);
-            this.pn_lector.Location = new System.Drawing.Point(0, 0);
-            this.pn_lector.Name = "pn_lector";
-            this.pn_lector.Size = new System.Drawing.Size(1034, 533);
-            this.pn_lector.TabIndex = 2;
-            // 
-            // htmlPanel
-            // 
-            this.htmlPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.htmlPanel.AutoScroll = true;
-            this.htmlPanel.BackColor = System.Drawing.SystemColors.Window;
-            this.htmlPanel.BaseStylesheet = "h1{\r\nfont-family:  Sansation,Arial, Calibri;\r\nfont-size:30px;\r\n}\r\nbody{\r\nfont-fam" +
-    "ily:  Sansation,Arial, Calibri;\r\nfont-size:30px;\r\n}";
-            this.htmlPanel.Location = new System.Drawing.Point(0, 0);
-            this.htmlPanel.Name = "htmlPanel";
-            this.htmlPanel.Size = new System.Drawing.Size(1034, 530);
-            this.htmlPanel.TabIndex = 0;
-            this.htmlPanel.Text = null;
-            this.htmlPanel.StylesheetLoad += new System.EventHandler<TheArtOfDev.HtmlRenderer.Core.Entities.HtmlStylesheetLoadEventArgs>(this.htmlPanel_StylesheetLoad);
-            this.htmlPanel.ImageLoad += new System.EventHandler<TheArtOfDev.HtmlRenderer.Core.Entities.HtmlImageLoadEventArgs>(this.htmlPanel_ImageLoad);
-            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -108,6 +68,16 @@ namespace Lector_Ebook
             this.label3.TabIndex = 3;
             this.label3.Text = "Capitulos:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cbo_pagina
+            // 
+            this.cbo_pagina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_pagina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbo_pagina.FormattingEnabled = true;
+            this.cbo_pagina.Location = new System.Drawing.Point(132, 17);
+            this.cbo_pagina.Name = "cbo_pagina";
+            this.cbo_pagina.Size = new System.Drawing.Size(228, 21);
+            this.cbo_pagina.TabIndex = 2;
             // 
             // label2
             // 
@@ -137,6 +107,34 @@ namespace Lector_Ebook
             this.label1.Text = "Capitulos Siguiente";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // pn_lector
+            // 
+            this.pn_lector.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pn_lector.Controls.Add(this.htmlPanel);
+            this.pn_lector.Location = new System.Drawing.Point(0, 0);
+            this.pn_lector.Name = "pn_lector";
+            this.pn_lector.Size = new System.Drawing.Size(1034, 533);
+            this.pn_lector.TabIndex = 2;
+            // 
+            // htmlPanel
+            // 
+            this.htmlPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.htmlPanel.AutoScroll = true;
+            this.htmlPanel.BackColor = System.Drawing.SystemColors.Window;
+            this.htmlPanel.BaseStylesheet = "h1{\r\nfont-family:  Sansation,Arial, Calibri;\r\nfont-size:30px;\r\n}\r\nbody{\r\nfont-fam" +
+    "ily:  Sansation,Arial, Calibri;\r\nfont-size:30px;\r\n}";
+            this.htmlPanel.Location = new System.Drawing.Point(0, 0);
+            this.htmlPanel.Name = "htmlPanel";
+            this.htmlPanel.Size = new System.Drawing.Size(1034, 530);
+            this.htmlPanel.TabIndex = 0;
+            this.htmlPanel.Text = null;
+            this.htmlPanel.StylesheetLoad += new System.EventHandler<TheArtOfDev.HtmlRenderer.Core.Entities.HtmlStylesheetLoadEventArgs>(this.htmlPanel_StylesheetLoad);
+            this.htmlPanel.ImageLoad += new System.EventHandler<TheArtOfDev.HtmlRenderer.Core.Entities.HtmlImageLoadEventArgs>(this.htmlPanel_ImageLoad);
             // 
             // Lector
             // 

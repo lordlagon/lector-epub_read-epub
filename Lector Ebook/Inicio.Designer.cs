@@ -28,19 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.tblFlow = new System.Windows.Forms.TableLayoutPanel();
             this.pn_cover = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
+            this.ptb_cover = new System.Windows.Forms.PictureBox();
             this.grb_controles = new System.Windows.Forms.GroupBox();
             this.lsv_biblioteca = new System.Windows.Forms.ListView();
+            this.button2 = new System.Windows.Forms.Button();
             this.cbo_clasificar = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.ptb_cover = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.progressBar = new CircularProgressBar.CircularProgressBar();
             this.tblFlow.SuspendLayout();
             this.pn_cover.SuspendLayout();
-            this.grb_controles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_cover)).BeginInit();
+            this.grb_controles.SuspendLayout();
             this.SuspendLayout();
             // 
             // tblFlow
@@ -97,8 +99,22 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // ptb_cover
+            // 
+            this.ptb_cover.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ptb_cover.BackColor = System.Drawing.Color.Transparent;
+            this.ptb_cover.Location = new System.Drawing.Point(0, 10);
+            this.ptb_cover.Name = "ptb_cover";
+            this.ptb_cover.Size = new System.Drawing.Size(507, 427);
+            this.ptb_cover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptb_cover.TabIndex = 0;
+            this.ptb_cover.TabStop = false;
+            // 
             // grb_controles
             // 
+            this.grb_controles.Controls.Add(this.progressBar);
             this.grb_controles.Controls.Add(this.lsv_biblioteca);
             this.grb_controles.Controls.Add(this.button2);
             this.grb_controles.Controls.Add(this.cbo_clasificar);
@@ -124,6 +140,26 @@
             this.lsv_biblioteca.TabIndex = 3;
             this.lsv_biblioteca.UseCompatibleStateImageBehavior = false;
             this.lsv_biblioteca.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lsv_biblioteca_MouseClick);
+            // 
+            // button2
+            // 
+            this.button2.AutoSize = true;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Sansation", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::Lector_Ebook.Properties.Resources.ebook;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(9, 19);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(329, 30);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Seleccionar Carpeta";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // cbo_clasificar
             // 
@@ -156,38 +192,38 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Clasificar Ebook";
             // 
-            // ptb_cover
+            // progressBar
             // 
-            this.ptb_cover.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ptb_cover.BackColor = System.Drawing.Color.Transparent;
-            this.ptb_cover.Location = new System.Drawing.Point(0, 10);
-            this.ptb_cover.Name = "ptb_cover";
-            this.ptb_cover.Size = new System.Drawing.Size(507, 427);
-            this.ptb_cover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptb_cover.TabIndex = 0;
-            this.ptb_cover.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.AutoSize = true;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Sansation", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::Lector_Ebook.Properties.Resources.ebook;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(9, 19);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(329, 30);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Seleccionar Carpeta";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.progressBar.AnimationFunction = ((WinFormAnimation.AnimationFunctions.Function)(resources.GetObject("progressBar.AnimationFunction")));
+            this.progressBar.AnimationSpeed = 500;
+            this.progressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.progressBar.Font = new System.Drawing.Font("Sansation", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.progressBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.progressBar.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.progressBar.InnerMargin = 0;
+            this.progressBar.InnerWidth = -1;
+            this.progressBar.Location = new System.Drawing.Point(113, 255);
+            this.progressBar.MarqueeAnimationSpeed = 2000;
+            this.progressBar.Name = "progressBar";
+            this.progressBar.OuterColor = System.Drawing.Color.Gray;
+            this.progressBar.OuterMargin = -10;
+            this.progressBar.OuterWidth = 10;
+            this.progressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.progressBar.ProgressWidth = 10;
+            this.progressBar.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.progressBar.Size = new System.Drawing.Size(120, 112);
+            this.progressBar.StartAngle = 270;
+            this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBar.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.progressBar.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.progressBar.SubscriptText = "";
+            this.progressBar.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.progressBar.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.progressBar.SuperscriptText = "";
+            this.progressBar.TabIndex = 4;
+            this.progressBar.Text = "Cargando Ebooks";
+            this.progressBar.TextMargin = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.progressBar.Value = 68;
             // 
             // Inicio
             // 
@@ -205,9 +241,9 @@
             this.tblFlow.ResumeLayout(false);
             this.pn_cover.ResumeLayout(false);
             this.pn_cover.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_cover)).EndInit();
             this.grb_controles.ResumeLayout(false);
             this.grb_controles.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_cover)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -223,6 +259,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListView lsv_biblioteca;
+        private CircularProgressBar.CircularProgressBar progressBar;
     }
 }
 

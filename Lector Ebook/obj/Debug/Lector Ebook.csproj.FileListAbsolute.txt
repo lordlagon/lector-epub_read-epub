@@ -18,3 +18,7 @@ C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\bin\Debug\HtmlRenderer.pdb
 C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\bin\Debug\HtmlRenderer.WPF.pdb
 C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\bin\Debug\HtmlRenderer.WinForms.dll
 C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\bin\Debug\HtmlRenderer.WinForms.pdb
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\bin\Debug\CircularProgressBar.dll
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\bin\Debug\WinFormAnimation.dll
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\bin\Debug\CircularProgressBar.xml
+C:\Users\migue\Prog\VS 15\Lector Ebook\Lector Ebook\bin\Debug\WinFormAnimation.xml

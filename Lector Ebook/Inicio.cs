@@ -31,6 +31,12 @@ namespace Lector_Ebook
             direccion_raiz = "";
             image_default = Properties.Resources.cover_default;
 
+            //Configurar progressBar
+            progressBar.Visible = false;
+            progressBar.Minimum = 0;
+            progressBar.Maximum = 100;
+            progressBar.Value = 0;
+   
             mostrar();
         }
 
@@ -48,6 +54,7 @@ namespace Lector_Ebook
             lsv_biblioteca.Columns.Add("Libros", lsv_biblioteca.Width - 23);
 
 
+
             imgL = new ImageList();
             imgL.ColorDepth = ColorDepth.Depth32Bit;
             imgL.ImageSize = new Size(80, 100);
@@ -57,26 +64,41 @@ namespace Lector_Ebook
 
             try
             {
-                paths = Directory.GetFiles(direccion_raiz);
+                paths = Directory.GetFiles(direccion_raiz,"*.epub");
+
+              double porcentaje = 100 / paths.Length;
+              progressBar.Visible = true;
 
                 foreach (String path in paths)
                 {
+                    
                     try
                     {
                         epub_general = EpubReader.ReadBook(path);
-                        imgL.Images.Add(epub_general.CoverImage);
+
+                        if (epub_general.CoverImage != null)
+                        {
+                            imgL.Images.Add(epub_general.CoverImage);
+                        }
+                        else
+                        {
+                            epub_general.CoverImage = image_default;
+                            imgL.Images.Add(image_default);
+                        }
+
                         ebook.Add(epub_general);
                     }
                     catch (Exception e)
                     {
-                        epub_general = EpubReader.ReadBook(path);
-                        imgL.Images.Add(image_default);
-                        epub_general.CoverImage = image_default;
-                        ebook.Add(epub_general);
+                        Console.WriteLine("Esto no es un Epub");
                     }
                 }
-            }
-            catch (Exception e)
+
+              
+               progressBar.Value = 100;
+               progressBar.Visible = false;
+
+            }catch (Exception e)
             {
 
             }
@@ -91,11 +113,12 @@ namespace Lector_Ebook
                 {
                     lsv_biblioteca.Items.Add("Titulo: " + epub.Title + "\nAutor: " + epub.Author, contador);
 
-                }catch(Exception e)
+                }
+                catch (Exception e)
                 {
 
                 }
-               contador++;
+                contador++;
 
             }
         }
@@ -132,5 +155,7 @@ namespace Lector_Ebook
             Lector form_lector = new Lector(epub_general);
             form_lector.ShowDialog();
         }
+
+        
     }
 }
