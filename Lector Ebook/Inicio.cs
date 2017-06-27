@@ -28,8 +28,8 @@ namespace Lector_Ebook
             InitializeComponent();
 
             //Incializar variables
-            direccion_raiz = "C:/Users/migue/Documents/Epub/Nuevos epub";
-            image_default = Lector_Ebook.Properties.Resources.Bajo_la_misma_estrella_alta;
+            direccion_raiz = "";
+            image_default = Properties.Resources.cover_default;
 
             mostrar();
         }
@@ -52,12 +52,13 @@ namespace Lector_Ebook
             imgL.ColorDepth = ColorDepth.Depth32Bit;
             imgL.ImageSize = new Size(80, 100);
 
-            //Cargar imagenes 
+            //Cargar epubs
             String[] paths = { };
-            paths = Directory.GetFiles(direccion_raiz);
 
             try
             {
+                paths = Directory.GetFiles(direccion_raiz);
+
                 foreach (String path in paths)
                 {
                     try

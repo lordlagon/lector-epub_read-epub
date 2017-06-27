@@ -31,12 +31,12 @@ namespace Lector_Ebook
         private void InitializeComponent()
         {
             this.pn_controles = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.cbo_pagina = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.pn_lector = new System.Windows.Forms.Panel();
             this.htmlPanel = new TheArtOfDev.HtmlRenderer.WinForms.HtmlPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pn_controles.SuspendLayout();
             this.pn_lector.SuspendLayout();
             this.SuspendLayout();
@@ -54,57 +54,17 @@ namespace Lector_Ebook
             this.pn_controles.Size = new System.Drawing.Size(1034, 61);
             this.pn_controles.TabIndex = 1;
             // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.label3.Location = new System.Drawing.Point(12, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 17);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Capitulos:";
-            // 
             // cbo_pagina
             // 
+            this.cbo_pagina.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbo_pagina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_pagina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbo_pagina.FormattingEnabled = true;
-            this.cbo_pagina.Location = new System.Drawing.Point(99, 17);
+            this.cbo_pagina.Location = new System.Drawing.Point(132, 17);
             this.cbo_pagina.Name = "cbo_pagina";
             this.cbo_pagina.Size = new System.Drawing.Size(224, 21);
             this.cbo_pagina.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.label2.Image = global::Lector_Ebook.Properties.Resources.previous;
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label2.Location = new System.Drawing.Point(348, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 50);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Capitulo Anterior";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.label1.Image = global::Lector_Ebook.Properties.Resources.skip;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(545, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 50);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Capitulos Siguiente";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pn_lector
             // 
@@ -134,6 +94,50 @@ namespace Lector_Ebook
             this.htmlPanel.StylesheetLoad += new System.EventHandler<TheArtOfDev.HtmlRenderer.Core.Entities.HtmlStylesheetLoadEventArgs>(this.htmlPanel_StylesheetLoad);
             this.htmlPanel.ImageLoad += new System.EventHandler<TheArtOfDev.HtmlRenderer.Core.Entities.HtmlImageLoadEventArgs>(this.htmlPanel_ImageLoad);
             // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.label3.Image = global::Lector_Ebook.Properties.Resources.search;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Location = new System.Drawing.Point(11, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(114, 34);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Capitulos:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.label2.Image = global::Lector_Ebook.Properties.Resources.previous;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label2.Location = new System.Drawing.Point(383, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(127, 50);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Capitulo Anterior";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.label1.Image = global::Lector_Ebook.Properties.Resources.skip;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Location = new System.Drawing.Point(597, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 50);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Capitulos Siguiente";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Lector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,7 +152,6 @@ namespace Lector_Ebook
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lector";
             this.pn_controles.ResumeLayout(false);
-            this.pn_controles.PerformLayout();
             this.pn_lector.ResumeLayout(false);
             this.ResumeLayout(false);
 
