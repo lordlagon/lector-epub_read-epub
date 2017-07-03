@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using VersFx.Formats.Text.Epub;
 
@@ -36,7 +31,7 @@ namespace Lector_Ebook
             progressBar.Minimum = 0;
             progressBar.Maximum = 100;
             progressBar.Value = 0;
-   
+
             mostrar();
         }
 
@@ -64,14 +59,14 @@ namespace Lector_Ebook
 
             try
             {
-                paths = Directory.GetFiles(direccion_raiz,"*.epub");
+                paths = Directory.GetFiles(direccion_raiz, "*.epub");
 
-              double porcentaje = 100 / paths.Length;
-              progressBar.Visible = true;
+                double porcentaje = 100 / paths.Length;
+                progressBar.Visible = true;
 
                 foreach (String path in paths)
                 {
-                    
+
                     try
                     {
                         epub_general = EpubReader.ReadBook(path);
@@ -94,11 +89,12 @@ namespace Lector_Ebook
                     }
                 }
 
-              
-               progressBar.Value = 100;
-               progressBar.Visible = false;
 
-            }catch (Exception e)
+                progressBar.Value = 100;
+                progressBar.Visible = false;
+
+            }
+            catch (Exception e)
             {
 
             }
@@ -156,6 +152,6 @@ namespace Lector_Ebook
             form_lector.ShowDialog();
         }
 
-        
+
     }
 }
